@@ -15,11 +15,10 @@ usage: Current authenticated user, UI, preferred language etc.
 
 #### Adding a context:
 
-    1. We need to create a separate file.
-    2. import React,{createContext,Component} from 'react'
-    3. export const ContextName = createContext()
-    4.
-
+1. We need to create a separate file.
+2. import React,{createContext,Component} from 'react'
+3. export const ContextName = createContext()
+4.
             class ContextProvider extends Component{
             state={}
             render()
@@ -32,30 +31,27 @@ usage: Current authenticated user, UI, preferred language etc.
             }
             }
 
-    5. Call the components inside <ContextProvider> </ContextProvider> and the components can now access the contexts
-
-    6. Now in component file, we have to import {ThemeContext}, (always in destructuring format, this causes an error at first time).
-
-    7. In component file we have to write, static contextType = ThemeContext;
-
-    8. now we can easily access the whole context by writing this.context. (we can also access this.context.yourNamedValue, easy way to destructuring the context items)
+5. Call the components inside <ContextProvider> </ContextProvider> and the components can now access the contexts
+6. Now in component file, we have to import {ThemeContext}, (always in destructuring format, this causes an error at first time).
+7. In component file we have to write, static contextType = ThemeContext;
+8. now we can easily access the whole context by writing this.context. (we can also access this.context.yourNamedValue, easy way to destructuring the context items)
 
 In point number 7 we can access context by assigning tht context into the static variable contextType. But, there is an another way, this way we can access context by using Consumer.
 
 #### why Consumer?
 
 1. It can be used in functional component as well as class component, but the contextType is for only class based component.
-
 2. We can use multiple context by using this(Consumer) type context access system.
 
 \*\*\*in this project I used Consumer based context in Booklist.jsx and contextType based solution in myNavbar.jsx file.
 
 In Consumer based context, we need to do these steps:
 
-    1.  <ThemeContext.Consumer>  </ThemeContext.Consumer>
-    2. Inside this a callback function need to be call, this callback function basically receives a context as a parameter.
-    3. All things are like previous.
-    4. Example:
+1.  <ThemeContext.Consumer>  </ThemeContext.Consumer>
+2. Inside this a callback function need to be call, this callback function basically receives a context as a parameter.
+3. All things are like previous.
+
+4. Example:
 
                 render() {
             return (
