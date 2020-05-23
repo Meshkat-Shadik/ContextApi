@@ -1,5 +1,5 @@
 ***************************************************************
-##                         Context API:
+###                         Context API:
 ***************************************************************
 This gives us a way to share state, previously we can do that with props. In a larger type of application, props doesn't gives the effective result.
 For solving this problem, Context API arises. It stores the data/state in a central place and share it between components without having to pass it down as props.
@@ -111,7 +111,7 @@ Surround the all context (Consumer) with new one.
 
 
 *******************************************************************
-####                              HOOKS
+###                              HOOKS
 *******************************************************************
 Basically, Hooks are just special functions and they allow us to do things inside functional components that we'd only be able to do inside a class component.
 Ex- using state. Previously we can access state only class component, but using the concept of Hooks we can easily implement states in functional component also.
@@ -125,7 +125,7 @@ useContext() - consume context in a functional component.
 
 
 *******************************************************************
-####                         HOOKS & CONTEXT 
+###                         HOOKS & CONTEXT 
 *******************************************************************
 
 We can use 'useContext' in the jsx file, as a context holder by using the concepts of HOOKS.
